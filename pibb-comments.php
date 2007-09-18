@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Pibb Comments
-Plugin URI: https://pibb.com/plugins
+Plugin URI: https://pibb.com/go/wordpressplugin
 Description: Embedd a Pibb thread for commenting at the end of your blog posts.
 Author: Janrain, Inc.
 Author URI: http://www.janrain.com/
