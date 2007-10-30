@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Pibb Comments
-Plugin URI: https://pibb.com/go/wordpressplugin
+Plugin URI: https://pibb.com/plugins
 Description: Embedd a Pibb thread for commenting at the end of your blog posts.
 Author: Janrain, Inc.
 Author URI: http://www.janrain.com/
@@ -63,7 +63,6 @@ function pibb_ensure_topic( $post_id ) {
             urlencode($pibb_api_key);
   
      $cmdline = escapeshellcmd("/usr/bin/env curl --insecure " . $url);
-     //throw new Exception($cmdline);
      exec($cmdline, $results, $return);
      if(!$return) {
         $insert = "INSERT INTO " . $table_name .
@@ -72,7 +71,7 @@ function pibb_ensure_topic( $post_id ) {
   
         $results = $wpdb->query( $insert );
      } else {
-       throw new Exception("curl result code [" . $return . "] [" . $sesults . "]");
+       trigger_error("curl result code [" . $return . "] [" . $results . "]", E_USER_ERROR);
      }
    }
    

@@ -50,5 +50,12 @@ OR
 You can leave us feedback by going here:
 https://pibb.com/feedback
 
+== Known Issues ==
 
+* Pibb Comments is not supported on Windows platforms
+
+* Access to the exec() function is needed, not all hosting services allow this. 
+  
+  The follow error is produced:
+  Warning: exec() has been disabled for security reasons in /home/user/public_html/wp-content/plugins/pibb-comments.php on line 66
 
